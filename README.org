@@ -27,6 +27,13 @@
    If you already have ~opam~ installed, you can skip this step.
 
 *** This invocation will vary based on your system.
+
+    For most systems you can use this shell script:
+   
+    #+BEGIN_SRC bash
+    bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
+    #+END_SRC
+    
     On Debian:
 
     #+BEGIN_SRC bash
@@ -72,26 +79,15 @@
     For the Windows Subsystem for Linux, you must also include ~--disable-sandboxing~ with ~opam init~
 
     #+BEGIN_SRC bash
-    opam init -y --compiler=4.07.1
+    opam init -y --compiler=5.1.0
     eval $(opam env)
     #+END_SRC
 
     If you already have ~opam~ installed and initialized, do this instead to
-    switch to ~4.07.1~:
+    switch to ~5.1.0~:
 
     #+BEGIN_SRC bash
-    opam switch create 4.07.1
-    eval $(opam env)
-    #+END_SRC
-
-    If you get an error like this:
-    #+BEGIN_SRC
-    bash[ERROR] Compiler selection '4.07.1' is ambiguous. matching packages: { ocaml-base-compiler.4.07.1, ocaml-system.4.07.1 }
-    #+END_SRC
-    pick the system one:
-
-    #+BEGIN_SRC bash
-    opam switch create ocaml-system.4.07.1
+    opam switch create 5.1.0
     eval $(opam env)
     #+END_SRC
 
